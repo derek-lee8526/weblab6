@@ -87,3 +87,15 @@ p {
 #deleteButton:hover {
     cursor: pointer;
 }
+
+#banner {
+    background-color: orange;
+    text-align: right;
+    height: 50px;
+}
+
+#logout {
+    margin: 0.6% 1.3% 0 0;
+    width: 6%;
+    height: 33px;
+}

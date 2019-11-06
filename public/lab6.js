@@ -97,6 +97,10 @@ function search() {
 
 }
 
+function logout() {
+    window.location.href = '/'
+}
+
 // function addToStorage() {
 //     let name = document.getElementById("name");
 //     let description = document.getElementById("about");
