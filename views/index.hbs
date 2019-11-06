@@ -1,0 +1,34 @@
+{{#if loggedIn}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./lab6.css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id=mainDiv>
+            <div id=headerDiv>
+                <div id=headerContent>
+                    <p>Artist Directory</p>
+                    <input type="text" class=inputBox id=input>
+                    <button type="button" onclick="showAdd()">Add Artist</button>
+                    <button type="button" onclick="search()">Search</button>
+                </div>
+            </div>
+            <div id=addArtistForm style="display: none">  
+                <form id="form" method='POST' action='/lab5/add' onsubmit="this.submit(); this.reset(); return false" > 
+                    <input type ='text' placeholder="Artist Name" class=inputBox id="name" maxlength="40" name='name'> <br/>
+                    <input type ='text' placeholder="About Artist" class=inputBox id="about" maxlength="40" name='about'> <br/>
+                    <input type ='text' placeholder="Artist Image" id="image" class=inputBox name='img'><br/>
+                    <input type ="submit" id="addButton" value="Add" onclick=" getUser();"/>
+                </form>
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="./lab6.js"></script>
+    </html>
+
+{{else}}
+    <div>You are not logged in</div>
+{{/if}}
